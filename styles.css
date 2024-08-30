@@ -1,0 +1,775 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Estilos generales */
+.header, .navbar, .logo, .nav-links, .header-content h1, .header-content p, 
+.products-section, .product-grid, .product-card, .product-image, .product-price, 
+.product-info, .cart-and-checkout-section, .cart-box, .checkout-box, .form-group, 
+input, select, .remove-btn, #cart-items li, #total, #floating-cart, .logo-container, 
+.logotipo, .acerca-de-section, .titulo-seccion, .descripcion-seccion, .btn-regresar {
+    font-family: 'Lora', serif; /* Aplicar la fuente a todos los elementos */
+}
+
+
+.header {
+    background: url('hola.png') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    animation: fadeIn 2s ease-in;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Opacidad ajustada */
+}
+
+header .container {
+    z-index: 2;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #f4a300; /* Color dorado más cálido */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1) rotate(-5deg);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
+}
+
+.logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los enlaces se ajusten si hay poco espacio */
+}
+
+
+.header-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: slideInFromTop 1s ease-out;
+}
+
+.header-content p {
+    font-size: 24px;
+    margin-bottom: 40px;
+    animation: slideInFromBottom 1s ease-out;
+}
+
+.btn-primary {
+    text-decoration: none;
+    color: #fff;
+    background-color: #d97d00; /* Color dorado más oscuro */
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #b56200; /* Color dorado aún más oscuro */
+    transform: scale(1.05);
+}
+
+/* Estilos responsivos para dispositivos móviles */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+
+    .logo {
+        width: 120px;
+        height: 120px;
+    }
+
+
+    .header-content h1 {
+        font-size: 36px;
+    }
+
+    .header-content p {
+        font-size: 20px;
+    }
+
+    .btn-primary {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .header-content h1 {
+        font-size: 28px;
+    }
+
+    .header-content p {
+        font-size: 18px;
+    }
+
+    .btn-primary {
+        padding: 6px 12px;
+    }
+}
+/*                Estilos del menu para la selecion del tipo de compra               */
+.header {
+    position: relative;
+    padding-bottom: 80px;
+}
+
+.floating-links {
+    position: fixed;
+    bottom: 0; /* Cambia de top: 0; a bottom: 0; para posicionarlo en la parte inferior */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: rgba(255, 179, 71, 0.8); /* Fondo naranja cálido con más transparencia */
+    padding: 10px;
+    z-index: 1000;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2); /* Sombra en la parte superior del contenedor */
+    transition: background-color 0.3s ease;
+}
+
+
+.floating-links:hover {
+    background: rgba(255, 204, 128, 0.8); /* Cambio de color de fondo al pasar el cursor */
+}
+
+.specialty {
+    text-align: center;
+    animation: zoom 5s infinite alternate; /* Efecto de zoom continuo */
+}
+
+.specialty-link {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
+}
+
+.specialty-link:hover {
+    transform: scale(1.1); /* Agranda el enlace al pasar el cursor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra al pasar el cursor */
+}
+
+.specialty-link:active {
+    transform: scale(0.95); /* Efecto de "clic" */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.specialty-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.specialty p {
+    margin-top: 5px;
+    font-family: Arial, sans-serif;
+    font-weight: bold; /* Texto en negritas */
+    color: #000000; /* Texto en negro */
+}
+
+/* Efecto de zoom continuo */
+@keyframes zoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+/* Estilos y efectos especiales para dispositivos móviles */
+@media (max-width: 768px) {
+    .specialty-link {
+        width: 60px;
+        height: 60px;
+    }
+
+    .specialty-link:active {
+        animation: vibrate 0.2s ease-in-out; /* Añade un efecto de vibración ligera al tocar */
+        background-color: rgba(255, 224, 178, 0.8); /* Cambia el color de fondo cuando se toca */
+    }
+}
+
+@media (max-width: 480px) {
+    .specialty-link {
+        width: 50px;
+        height: 50px;
+    }
+
+    .specialty p {
+        font-size: 12px;
+    }
+
+    .specialty-link:active {
+        animation: vibrate 0.2s ease-in-out; /* Añade un efecto de vibración ligera al tocar */
+        background-color: rgba(255, 224, 178, 0.8); /* Cambia el color de fondo cuando se toca */
+    }
+}
+
+/* Efecto de vibración simulado */
+@keyframes vibrate {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-2px); }
+    100% { transform: translateX(0); }
+}
+/* Sección de Productos--------------------------------------------------------------------------------------------------------------- */
+
+/* Sección del menú */
+.products-section {
+    padding: 50px 20px;
+    background-color: #F2E2C4; /* Fondo beige suave */
+    text-align: center;
+}
+
+/* Estilos para el título */
+.products-section h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #6B4226; /* Marrón tierra */
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+}
+
+
+/* Contenedor de productos */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Ajuste a 180px mínimo */
+    gap: 25px; /* Más espaciado entre tarjetas */
+    justify-items: center;
+}
+
+/* Tarjeta de producto */
+.product-card {
+    background-color: #FFFFFF; /* Fondo blanco para la tarjeta */
+    border: none; /* Quitar el contorno */
+    border-radius: 10px;
+    padding: 15px; /* Ajuste de padding */
+    max-width: 250px; /* Tamaño máximo ligeramente más grande */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+/* Imagen del producto */
+.product-image {
+    border-radius: 15px;
+    position: relative;
+    width: 100%; /* Ajusta el ancho del contenedor de la imagen al 100% del contenedor padre */
+    max-width: 300px; /* Establece un ancho máximo para la imagen */
+    height: 180px; /* Establece una altura fija para la imagen */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
+}
+
+.product-image img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: 100%; /* Asegura que la imagen ocupe toda la altura del contenedor */
+    object-fit: cover; /* Mantiene las proporciones de la imagen, recortando si es necesario para llenar el contenedor */
+}
+
+.product-price {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #ff9d00; /* Marrón oscuro */
+    color: #FFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.1rem; /* Ajuste de tamaño de fuente */
+    font-weight: bold;
+}
+
+/* Información del producto */
+.product-info {
+    margin-top: 15px; /* Reducción del margen superior */
+    text-align: center;
+ 
+}
+
+.product-info h3 {
+    color: #6B4226; /* Marrón tierra */
+    font-size: 1.3rem; /* Ajuste del tamaño de la fuente */
+    margin-bottom: 10px; /* Ajuste del margen inferior */
+}
+
+.product-info p {
+    color: #666;
+    font-size: 0.75rem; /* Ajuste del tamaño de la fuente */
+    margin-bottom: 15px; /* Ajuste del margen inferior */
+}
+
+/* Botón de agregar al carrito */
+.btn-primary {
+    background-color: #ff4400; /* Naranja coral */
+    color: #FFF;
+    border: none;
+    padding: 10px 20px; /* Ajuste de padding */
+    font-size: 1.1rem; /* Ajuste del tamaño de la fuente */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #ffa947da; /* Naranja tomate */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .products-section h2 {
+        font-size: 2rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* Dos productos en fila */
+    }
+
+    .product-card {
+        max-width: 100%;
+    }
+}
+
+
+/*.........................................................................................................................................*/
+
+/* Sección de Carrito y Checkout */
+.cart-and-checkout-section {
+    padding: 80px 20px;
+    background-color: #fff8f0; /* Fondo claro con un tono cálido */
+    color: #333;
+}
+
+.cart-and-checkout-section h2 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 50px;
+    color: #d97d00; /* Color dorado más oscuro */
+    animation: fadeIn 1.5s ease-in;
+}
+
+.cart-checkout-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff9f2; /* Fondo claro con un tono cálido */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cart-checkout-grid p {
+    color: #d97d00; /* Color dorado más oscuro */
+    font-weight: bold;
+    font-size: 24px;
+}
+/*................................................................................................................................................................*/
+
+/* Estilos generales para la sección de carrito y confirmación */
+.cart-and-checkout-section {
+    background: #ffffff; /* Fondo blanco */
+    padding: 60px 20px;
+    color: #333333; /* Texto gris oscuro */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+.cart-and-checkout-section h2 {
+    font-size: 2.5rem;
+    color: #7e2003e7; /* Naranja vibrante */
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: bold;
+    position: relative;
+}
+
+.cart-and-checkout-section h2::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 4px;
+    background: #ffab40; /* Naranja suave */
+    border-radius: 2px;
+}
+
+/*------------------------ ESTILOS PARA LA SECCION DEL FORMULARIO Y EL CARROTO DE COMPRAS  ------------------------------*/
+
+/* Estilo general para la sección */
+.cart-and-checkout-section {
+    background-color: #fff8e1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container_cart h2{
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #e67e22; /* Color naranja brillante para el título */
+    font-family: 'Georgia', serif; /* Cambiar la fuente para un estilo más elegante */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Agregar un sombreado sutil */
+    position: relative;
+    text-transform: capitalize;
+    
+}
+
+/* Estilo del grid */
+.cart-checkout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Carrito de compras */
+.cart-box {
+    background-color: #ffe0b2;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #ff6f00;
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cart-items li {
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: #bf360c;
+}
+
+/* Estilo del total */
+#total {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Formulario de confirmación */
+.checkout-box {
+    background-color: #ffcc80;
+    margin-bottom: 70px; /* Ajusta este valor según el espacio que desees */
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #ffab40;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    color: #bf360c;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ff6f00;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Botón de confirmación */
+.btn-primary {
+    background-color: #d84315;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover {
+    background-color: #bf360c;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .cart-checkout-grid {
+        grid-template-columns: 1fr; /* Hacer que las columnas se apilen en dispositivos móviles */
+        gap: 10px; /* Reducir el espacio entre las secciones */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Ajustar tamaño de fuente del título */
+    }
+
+    .cart-box, .checkout-box {
+        padding: 15px; /* Reducir el padding para un mejor ajuste en pantallas pequeñas */
+    }
+
+    .btn-primary {
+        width: 100%; /* Hacer el botón de confirmación más amplio */
+        padding: 15px 0; /* Ajustar padding para mayor facilidad de clic en pantallas táctiles */
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.2em; /* Reducir aún más el tamaño del título en pantallas muy pequeñas */
+    }
+
+    input, select {
+        padding: 10px; /* Aumentar el padding para facilitar el uso en dispositivos táctiles */
+    }
+
+    .btn-primary {
+        padding: 12px 0; /* Ajustar padding del botón para pantallas muy pequeñas */
+        font-size: 0.9em; /* Reducir un poco el tamaño del texto en el botón */
+    }
+}
+
+
+/*----------------- FIN DE LOS ESTILOS PARA LA SECCION DEL FORMULARIO Y EL CARROTO DE COMPRAS  --------------------------*/
+
+
+/* Estilos para el botón de eliminar en el carrito */
+.remove-btn {
+    background-color: #9f0808; /* Naranja brillante */
+    color: #ffffff; /* Texto blanco */
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-left: 10px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.remove-btn:hover {
+    background-color: #ff0000; /* Naranja más oscuro */
+    transform: scale(1.05);
+}
+
+.remove-btn:focus {
+    outline: 2px solid #ffab40; /* Naranja suave */
+    outline-offset: 2px;
+}
+
+/* Estilos para los ítems del carrito */
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0; /* Línea divisoria gris claro */
+    color: #333333;
+}
+
+/* Estilos para el total del carrito */
+#total {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ff8c00; /* Naranja brillante */
+    margin: 20px 0;
+}
+
+/* Estilos para el contador de productos en el carrito flotante */
+#cart-count {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff5722; /* Naranja brillante */
+}
+
+
+/* Carrito de Compras Flotante */
+#floating-cart {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+    background-color: #ffffff; /* Color dorado más cálido */
+    border-radius: 50%;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    cursor: pointer;
+    animation: bounce 2s infinite; /* Animación de rebote */
+}
+
+#floating-cart img {
+    width: 70%;
+    height: auto;
+}
+
+#floating-cart:hover {
+    transform: scale(1.2);
+    background-color: #ffffff; /* Color dorado más oscuro */
+}
+
+#cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #a00; /* Rojo más oscuro */
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    animation: pulse 1.5s infinite; /* Animación de pulso */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInFromTop {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInFromBottom {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Estilos para el logotipo */
+.logo-container {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.logotipo {
+    max-width: 150px;
+    border-radius: 50%;
+    border: 3px solid #ff5722; /* Borde naranja brillante */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Estilos específicos para el área de comentarios */
+textarea#comments {
+    height: 100px;
+    resize: vertical; /* Permite redimensionar solo verticalmente */
+}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+.form-group input, .form-group textarea, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+/* Estilos para el texto del placeholder */
+textarea::placeholder {
+    color: #adabab; /* Color del texto del placeholder */
+    text-align: center;
+}

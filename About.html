@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> <!-- Define el conjunto de caracteres utilizado en la página -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Establece el viewport para una correcta visualización en dispositivos móviles -->
+    <title>Acerca de Nosotros - Taquería El Sabor Mexicano</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="styles.css"> <!-- Enlaza el archivo de estilos CSS externo -->
+</head>
+<body>
+
+    <!-- Sección flotante para los enlaces -->
+    <section class="floating-links">
+        <!-- Cada div dentro de la sección representa un enlace flotante -->
+        <div class="specialty">
+            <a href="Index.html" class="specialty-link"> <!-- Enlace para regresar a la página de inicio -->
+                <img src="Btn_Regresar.jpg" alt="Acerca de" class="specialty-img"> <!-- Imagen del botón de regreso -->
+            </a>
+            <p>Regresar</p> <!-- Texto debajo del ícono -->
+        </div>
+        <div class="specialty">
+            <a href="#promotions" class="specialty-link"> <!-- Enlace a la sección de promociones -->
+                <img src="Promotions.png" alt="Promociones" class="specialty-img"> <!-- Imagen para promociones -->
+            </a>
+            <p>Promociones</p> <!-- Texto debajo del ícono -->
+        </div>
+        <div class="specialty">
+            <a href="#tacos" class="specialty-link"> <!-- Enlace a la sección de tacos -->
+                <img src="Taco.jpg" alt="Tacos" class="specialty-img"> <!-- Imagen para tacos -->
+            </a>
+            <p>Tacos</p> <!-- Texto debajo del ícono -->
+        </div>
+        <div class="specialty">
+            <a href="#guisados" class="specialty-link"> <!-- Enlace a la sección de guisados -->
+                <img src="Guisado.jpg" alt="Guisados" class="specialty-img"> <!-- Imagen para guisados -->
+            </a>
+            <p>Guisados</p> <!-- Texto debajo del ícono -->
+        </div>
+        <div class="specialty">
+            <a href="#enchiladas" class="specialty-link"> <!-- Enlace a la sección de enchiladas -->
+                <img src="Enchiladas.jpg" alt="Enchiladas" class="specialty-img"> <!-- Imagen para enchiladas -->
+            </a>
+            <p>Enchiladas</p> <!-- Texto debajo del ícono -->
+        </div>
+    </section>
+
+    <!-- Sección 'Sobre Nosotros' con información acerca de la taquería -->
+    <section class="about-us">
+        <h2>Sobre Nosotros</h2>
+        <div class="content">
+            <p>La Taquería Avirodrian nació con una visión innovadora: modernizar los servicios de la Escuela Tecnológica Superior de la Montaña. En un entorno educativo que valora la excelencia y la eficiencia, Avirodrian se estableció para ofrecer una experiencia culinaria única que se alinea con estos principios.</p>
+            <p>Desde sus inicios, Avirodrian se comprometió a superar los estándares tradicionales de las taquerías. La expansión es una parte clave de su estrategia, buscando no solo crecer en número de ubicaciones, sino también en calidad y en la satisfacción de sus clientes. Este compromiso se refleja en su meticuloso enfoque hacia la limpieza y el mantenimiento, elementos esenciales para asegurar una experiencia segura y agradable para todos.</p>
+            <p>Además, Avirodrian se dedica a ofrecer una excelente calidad a precios accesibles. Este equilibrio entre calidad y costo es fundamental para su propuesta de valor, garantizando que todos los clientes, desde estudiantes hasta residentes locales, puedan disfrutar de tacos deliciosos y bien preparados sin preocuparse por el impacto en su presupuesto.</p>    
+            <p>La Taquería Avirodrian no solo representa una alternativa moderna y eficiente en el ámbito gastronómico, sino que también es un modelo de cómo la calidad, la higiene y la accesibilidad pueden coexistir para crear una experiencia culinaria excepcional.</p>
+        </div>
+    </section>
+
+    <!-- Sección de contacto con enlaces a WhatsApp y correo electrónico -->
+    <section class="contact">
+        <h2>Contacto</h2>
+        <div class="contact-info">
+            <!-- Elemento de contacto para WhatsApp -->
+            <div class="contact-item">
+                <a href="https://api.whatsapp.com/send?phone=527561574133&text=Hola%2C%20me%20interesa%20más%20información%20sobre%20los%20productos%20de%20la%20taquería." target="_blank"> <!-- Enlace para abrir un chat en WhatsApp con un mensaje por defecto -->
+                    <div class="icon-container">
+                        <img src="Wb.jpg" alt="WhatsApp" class="contact-icon"> <!-- Imagen del ícono de WhatsApp -->
+                    </div>
+                </a>
+                <span>WhatsApp</span> <!-- Texto debajo del ícono -->
+            </div>                      
+            <!-- Elemento de contacto para correo electrónico -->
+            <div class="contact-item">
+                <a href="mailto:tacosavirodrian@gmail.com"> <!-- Enlace para enviar un correo electrónico -->
+                    <div class="icon-container">
+                        <img src="E_mail.jpg" alt="Email" class="contact-icon"> <!-- Imagen del ícono de Email -->
+                    </div>
+                </a>
+                <span>Email</span> <!-- Texto debajo del ícono -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sección en blanco con altura mínima -->
+    <section class="white-section">
+        <p></p> <!-- Contenido vacío, pero se utiliza para proporcionar un espaciado o una estructura adicional -->
+    </section>
+
+    <!-- Estilos internos para el diseño de la página -->
+    <style>
+        .white-section {
+            width: 80%; /* Ajusta el ancho de la sección */
+            max-width: 1000px; /* Establece un ancho máximo para la sección (opcional) */
+            margin: 0 auto; /* Centra la sección horizontalmente */
+            padding: 40px; /* Espaciado interno, ajustado para mayor altura */
+            box-sizing: border-box; /* Incluye el padding y el border en el cálculo del ancho */
+            min-height: 100px; /* Altura mínima de la sección, ajusta según necesites */
+        }
+
+        body {
+            font-family: 'Arial', sans-serif; /* Fuente predeterminada del cuerpo de la página */
+            background: linear-gradient(to bottom, #ffddc1, #f8b4a4); /* Gradiente sutil cálido para el fondo */
+            color: #2c3e50; /* Color del texto */
+            margin: 0; /* Elimina los márgenes por defecto del cuerpo */
+            padding: 0; /* Elimina el relleno por defecto del cuerpo */
+            display: flex; /* Usa el modelo de caja flexible */
+            flex-direction: column; /* Orienta los elementos en una columna */
+            align-items: center; /* Alinea los elementos en el centro horizontalmente */
+            min-height: 100vh; /* Asegura que el cuerpo tenga al menos la altura completa de la ventana */
+            line-height: 1.6; /* Altura de línea para mejorar la legibilidad */
+        }
+
+        .about-us, .contact, .location {
+            background-color: #fff6e5; /* Naranja suave para el fondo del contenedor */
+            padding: 50px 20px; /* Espaciado interno del contenedor */
+            text-align: center; /* Centra el texto dentro del contenedor */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil alrededor del contenedor */
+            border-radius: 8px; /* Bordes redondeados del contenedor */
+            margin: 20px 0; /* Espaciado vertical entre secciones */
+            max-width: 800px; /* Ancho máximo del contenedor */
+            width: 100%; /* Ancho completo del contenedor */
+        }
+        
+        .contact-info {
+            display: flex; /* Usa el modelo de caja flexible para los ítems de contacto */
+            justify-content: center; /* Centra los ítems de contacto horizontalmente */
+            gap: 20px; /* Espacio entre los ítems de contacto */
+            flex-wrap: wrap; /* Permite que los ítems se ajusten en múltiples filas si es necesario */
+        }
+
+        .contact-item {
+            text-align: center; /* Centra el texto dentro del ítem de contacto */
+            position: relative; /* Necesario para posicionar el pseudo-elemento */
+        }
+
+        .contact-item::after {
+            content: ""; /* Crea un pseudo-elemento vacío */
+            display: block; /* Hace que el pseudo-elemento se comporte como un bloque */
+            width: 100%; /* Asegura que el espaciado cubra el ancho del contenedor */
+        }
+
+        .icon-container {
+            display: inline-flex; /* Usa el modelo de caja flexible para el contenedor del ícono */
+            justify-content: center; /* Centra el ícono horizontalmente */
+            align-items: center; /* Centra el ícono verticalmente */
+            border-radius: 50%; /* Hace que el contenedor sea circular */
+            overflow: hidden; /* Asegura que la imagen no se desborde del contenedor */
+            background-color: #f0f0f0; /* Color de fondo del contenedor del ícono */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efecto de sombra alrededor del contenedor */
+            transition: background-color 0.3s, box-shadow 0.3s; /* Transición suave para los cambios en el fondo y sombra */
+        }
+
+        .icon-container:hover {
+            background-color: #e0e0e0; /* Color de fondo al pasar el mouse */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Efecto de sombra al pasar el mouse */
+        }
+
+        .contact-icon {
+            width: 60px; /* Ajusta el tamaño de la imagen del ícono */
+            height: 60px; /* Ajusta el tamaño de la imagen del ícono */
+        }
+
+        .contact-info span {
+            display: block; /* Muestra el texto en bloque */
+            margin-top: 5px; /* Espacio superior del texto debajo del ícono */
+            font-size: 16px; /* Tamaño del texto debajo del ícono */
+        }
+
+        .location {
+            margin-bottom: 100px; /* Espacio adicional en la parte inferior de la sección de ubicación */
+        }
+
+        h2 {
+            font-size: 2.5rem; /* Tamaño del texto del título */
+            margin-bottom: 30px; /* Espacio inferior del título */
+            color: #e67e22; /* Color naranja brillante para el título */
+            font-family: 'Georgia', serif; /* Fuente elegante para el título */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil en el texto del título */
+            position: relative; /* Necesario para el pseudo-elemento después del título */
+        }
+
+        h2::after {
+            content: ""; /* Crea un pseudo-elemento vacío */
+            display: block; /* Hace que el pseudo-elemento se comporte como un bloque */
+            width: 50%; /* Ancho del subrayado debajo del título */
+            height: 4px; /* Altura del subrayado debajo del título */
+            background: #e67e22; /* Color del subrayado */
+            margin: 10px auto 0; /* Margen superior y centrado horizontalmente del subrayado */
+            border-radius: 2px; /* Bordes redondeados del subrayado */
+        }
+
+        .content p, .contact-info p, .location p {
+            font-size: 1.2rem; /* Tamaño del texto en los párrafos */
+            margin-bottom: 20px; /* Espacio inferior de los párrafos */
+            color: #34495e; /* Color del texto */
+        }
+
+        address {
+            font-style: normal; /* Elimina el estilo de cursiva en la dirección */
+            margin: 20px 0; /* Espacio vertical de la dirección */
+        }
+
+        iframe {
+            border: 0; /* Elimina el borde del iframe */
+            border-radius: 8px; /* Bordes redondeados del iframe */
+            max-width: 100%; /* Ancho máximo del iframe */
+            height: 300px; /* Altura del iframe */
+        }
+
+        /* Estilos Responsivos */
+        @media (max-width: 768px) {
+            .about-us, .contact, .location {
+                max-width: 90%; /* Ajusta el ancho máximo en pantallas más pequeñas */
+            }
+
+            h2 {
+                font-size: 2rem; /* Reduce el tamaño del título en pantallas más pequeñas */
+            }
+
+            .content p, .contact-info p, .location p {
+                font-size: 1rem; /* Reduce el tamaño del texto en pantallas más pequeñas */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-us, .contact, .location {
+                max-width: 85%; /* Ajusta el ancho máximo en pantallas muy pequeñas */
+            }
+
+            h2 {
+                font-size: 1.8rem; /* Reduce aún más el tamaño del título en pantallas muy pequeñas */
+            }
+
+            .content p, .contact-info p, .location p {
+                font-size: 0.9rem; /* Reduce aún más el tamaño del texto en pantallas muy pequeñas */
+            }
+        }
+    </style>
+</body>
+</html>

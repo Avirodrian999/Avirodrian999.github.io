@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAQUERIA VIP</title>
+    <link rel="stylesheet" href="styles.css">    
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="overlay"></div>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="LOGO.jpg" alt="Logo Taquería El Buen Taco" class="logo-img">
+                </div>
+            </nav>
+            <div class="header-content">
+                <h1>Bienvenidos a Taquería AVIRODRIAN</h1>
+                <p>¡Los mejores tacos de la ciudad están aquí!</p>
+                <a href="#tacos" class="btn-primary">Ver Menú</a>
+            </div>
+        </div>
+    </header> 
+
+
+<!-- Sección flotante para los enlaces -->
+<section class="floating-links">
+    <div class="specialty">
+        <a href="#tacos" class="specialty-link">
+            <img src="Taco.jpg" alt="Tacos" class="specialty-img">
+        </a>
+        <p>Tacos</p>
+    </div>
+    <div class="specialty">
+        <a href="#guisados" class="specialty-link">
+            <img src="Guisado.jpg" alt="Guisados" class="specialty-img">
+        </a>
+        <p>Guisados</p>
+    </div>
+    <div class="specialty">
+        <a href="#enchiladas" class="specialty-link">
+            <img src="Enchiladas.jpg" alt="Enchiladas" class="specialty-img">
+        </a>
+        <p>Enchiladas</p>
+    </div>
+    <div class="specialty">
+        <a href="#promotions" class="specialty-link">
+            <img src="Promotions.png" alt="Promociones" class="specialty-img">
+        </a>
+        <p>Promociones</p>
+    </div>
+    <div class="specialty">
+        <a href="About.html" class="specialty-link">
+            <img src="About us.png" alt="Acerca de" class="specialty-img">
+        </a>
+        <p>Acerca de</p>
+    </div>
+</section>
+
+<!--*********************************************************************************************************************************-->
+    
+    <section id="tacos" class="products-section">
+        <div class="container">
+            <h2>Nuestro Menú</h2>
+            <h2 style="text-align: left; ">Tacos</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Suadero.jpg" alt="Taco Al Pastor">
+                        <span class="product-price">$30.00</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>De Suadero</h3>
+                        <p>Jugosos tacos con carne de cerdo adobada y suave, cocinada a la perfección y servida en tortillas frescas.</p>
+                        <button class="btn-primary" onclick="addToCart('Taco Al Pastor', 30.00)">Comprar</button>
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Papa_C.jpg" alt="Taco Al Pastor">
+                        <span class="product-price">$30.00</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>De Chorizo con papas</h3>
+                        <p>Tortillas rellenas de papas sazonadas con chorizo, combinadas con especias y sabor intenso.</p>
+                        <button class="btn-primary" onclick="addToCart('Taco Al Pastor', 30.00)">Comprar</button>
+                    </div>
+                </div>  
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Huevo_C.jpeg" alt="Taco Al Pastor">
+                        <span class="product-price">$30.00</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>De huevo con chorizo</h3>
+                        <p>Tortillas rellenas de huevo revuelto y chorizo, combinados para un sabor delicioso.</p>
+                        <button class="btn-primary" onclick="addToCart('Taco Al Pastor', 30.00)">Comprar</button>
+                    </div>
+                </div>
+
+                
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Dorados.jpg" alt="Taco Al Pastor">
+                        <span class="product-price">$30.00</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Tacos Dorados</h3>
+                        <p>Tortillas crujientes rellenas de carne desmenuzada, fritas hasta dorarse, con un sabor irresistible.</p>
+                        <button class="btn-primary" onclick="addToCart('Taco Al Pastor', 30.00)">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>   
+<!--************************************************    Guisados                **************************************************** -->
+    <section id="tacos" class="products-section">
+        <div class="container">
+            <h2 id="guisados" style="text-align: left; ">Guisados</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Frijol_F.jpg" alt="Taco Al Pastor">
+                        <span class="product-price">$30.00</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Frijol Frito</h3>
+                        <p>Frijoles cocidos y sazonados, luego fritos hasta obtener una textura cremosa y crujiente.</p>
+                        <button class="btn-primary" onclick="addToCart('Taco Al Pastor', 30.00)">Comprar</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Chicharron_v.avif" alt="Taco Al Pastor">
+                        <span class="product-price">$30.00</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Chicharron en salsa verde</h3>
+                        <p>Trozos de chicharrón cocidos en una salsa verde picante y sabrosa, llenos de sabor.</p>
+                        <button class="btn-primary" onclick="addToCart('Taco Al Pastor', 30.00)">Comprar</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Bistec_M.jpg" alt="Taco Al Pastor">
+                        <span class="product-price">$30.00</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Bistec a la mexicana </h3>
+                        <p>Carne de res sazonada y cocida con tomates, chiles y cebolla, en una salsa picante.</p>
+                        <button class="btn-primary" onclick="addToCart('Taco Al Pastor', 30.00)">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--************************************************    Enchiladas      **************************************************** -->
+    <section id="tacos" class="products-section">
+        <div class="container">
+            <h2 id="enchiladas" style="text-align: left; ">Enchiladas</h2>
+            <div class="product-grid">
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="E_Verdes.jpg" alt="Taco Al Pastor">
+                        <span class="product-price">$30.00</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Verdes</h3>
+                        <p>Tortillas rellenas de carne o pollo, bañadas en salsa verde y cubiertas con queso y crema.</p>
+                        <button class="btn-primary" onclick="addToCart('Taco Al Pastor', 30.00)">Comprar</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="E_Rojas.jpg" alt="Taco Al Pastor">
+                        <span class="product-price">$30.00</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Rojas</h3>
+                        <p>Tortillas rellenas de carne o pollo, bañadas en salsa roja y cubiertas con queso y crema.</p>
+                        <button class="btn-primary" onclick="addToCart('Taco Al Pastor', 30.00)">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección combinada de Carrito de Compras y Confirmación de Compra -->
+<section id="cart-and-checkout" class="cart-and-checkout-section">
+    <div class="container_cart">
+        <h2>Carrito de compras</h2>
+        <div class="cart-checkout-grid">
+            <!-- Carrito de Compras -->
+            <div id="cart" class="cart-box">
+                <ul id="cart-items"></ul>
+                <p>Total: $<span id="total">0.00</span></p>
+            </div>
+
+            <!-- Formulario de Confirmación -->
+<div class="checkout-box">
+    <form id="checkout-form" onsubmit="sendToWhatsApp(event)">
+        <div class="form-group">
+            <label for="name">Nombre del Estudiante o Maestro:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="grade">Grado y Grupo:</label>
+            <input type="text" id="grade" name="grade" required>
+        </div>
+
+        <div class="form-group">
+            <label for="time">Hora de Entrega:</label>
+            <input type="time" id="time" name="time" required>
+        </div>
+
+        <div class="form-group">
+            <label for="tip">Propina (opcional):</label>
+            <input type="number" id="tip" name="tip" min="0" step="0.01">
+        </div>
+
+        <div class="form-group">
+            <label for="comments">Comentarios Adicionales:</label>
+            <textarea id="comments" name="comments" placeholder="Ejemplo: Sin cebolla"></textarea>
+        </div>        
+
+        <button type="submit" class="btn-primary">Confirmar Compra</button>
+    </form>            
+</div>
+            
+
+        </div>
+    </div>
+</section>
+
+    <!-- Carrito de compras flotante -->
+    <div id="floating-cart">
+        <img src="cart-icon.webp" alt="Carrito de Compras">
+        <span id="cart-count">0</span>
+    </div>
+
+    <script src="script.js"></script>   
+</body>
+</html>
